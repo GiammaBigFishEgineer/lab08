@@ -47,7 +47,7 @@ public class DeathNoteImpl implements DeathNote {
 
     @Override
     public String getDeathCause(String name) {
-        
+        assertNot
     }
 
     @Override
