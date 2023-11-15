@@ -24,6 +24,8 @@ public class PeopleImpl implements People{
         this.name = name;
     }
 
+    public PeopleImpl() {}
+
 
     public String getName() {
         return this.name;
@@ -47,5 +49,17 @@ public class PeopleImpl implements People{
 
     public void setDeathDetail(String deathDetail) {
         this.deathDetail = deathDetail;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o){
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()){
+            return false;
+        }
+        People person = (People) o;
+        return this.getName().equals(person.getName());
     }
 }
