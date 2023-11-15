@@ -28,7 +28,6 @@ public class DeathNoteImpl implements DeathNote {
     }
 
     @Override
-    //TODO sistemare return con timing
     public boolean writeDeathCause(String cause) {
         People human = peopleList.get(peopleList.size());
         if(cause != null || !peopleList.isEmpty()){
@@ -38,7 +37,6 @@ public class DeathNoteImpl implements DeathNote {
     }
 
     @Override
-    //TODO sistemare return con timing
     public boolean writeDetails(String details) {
         People human = peopleList.get(peopleList.size());
         if(details != null || !peopleList.isEmpty()){
