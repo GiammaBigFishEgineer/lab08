@@ -47,17 +47,32 @@ public class DeathNoteImpl implements DeathNote {
 
     @Override
     public String getDeathCause(String name) {
-        assertNot
+        for(People i: peopleList){
+            if(i.getName().equals(name)){
+                return i.getDeathCasue();
+            }
+        }
+        throw new IllegalArgumentException("Name's not presents in list");
     }
 
     @Override
     public String getDeathDetails(String name) {
-        
+        for(People i: peopleList){
+            if(i.getName().equals(name)){
+                return i.getDeathDetail();
+            }
+        }
+        throw new IllegalArgumentException("Name's not presents in list");
     }
 
     @Override
     public boolean isNameWritten(String name) {
-        
+        for(People i: peopleList){
+            if(i.getName().equals(name)){
+                return true;
+            }
+        }
+        return false;
     }
     
 }
